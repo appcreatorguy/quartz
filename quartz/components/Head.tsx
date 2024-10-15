@@ -20,6 +20,30 @@ export default (() => {
     const iconPath = joinSegments(baseDir, "static/icon.png")
     const ogImagePath = `https://${cfg.baseUrl}/static/og-image.png`
 
+    const script = `
+      window.onload = function () {
+            var a = document.getElementById("optOut");
+
+            if (localStorage.getItem("umami.disabled") === "1") {
+              a.innerText = "opt into anonymous tracking";
+            } else {
+              a.innerText = "opt out of anonymous tracking";
+            }
+
+            a.onclick = function () {
+              if (localStorage.getItem("umami.disabled") === "1") {
+                localStorage.removeItem("umami.disabled");
+                console.log("umami enabled!");
+                a.innerText = "opt out of anonymous tracking";
+              } else {
+                localStorage.setItem("umami.disabled", 1);
+                console.log("umami disabled!");
+                a.innerText = "opt into anonymous tracking";
+              }
+            };
+          };
+    `;
+
     return (
       <head>
         <title>{title}</title>
@@ -46,6 +70,7 @@ export default (() => {
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
+        <div dangerouslySetInnerHTML={{__html: `<script type="text/javascript">${script}</script>` }} />
       </head>
     )
   }

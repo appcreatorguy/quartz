@@ -1,0 +1,5 @@
+#architecture 
+the [[harvard architecture]] is an example of an [[computer architecture]] that is useful in special purpose devices such as [[microprocessors]], where instructions are stored in a ROM. it is also used in more sophisticated CPUs, where the parallel fetching of code and data is necessary.
+in the [[harvard architecture]], data and instructions are *separately*, in **individual stores**.
+a good example of a device that employs the [[harvard architecture]] is the arduino UNO, which uses a ATmega 328 [[microprocessors|microprocessor]], with a separate flash memory chip that instructions are written to, and a SRAM chip for storing data.
+the main advantage of the [[harvard architecture]] over the [[von Neumann architecture]] is that it can access data and instructions simultaneously, so therefore is faster and more efficient.

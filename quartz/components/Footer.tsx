@@ -15,7 +15,8 @@ export default ((opts?: Options) => {
       <footer class={`${displayClass ?? ""}`}>
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
-          <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
+          <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}.
+          This site uses <a href="https://umami.alphacerium.dev/share/5rY7aEQOWI7QnXhE/alphacerium.dev">umami</a> for anonymous analytics.
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
@@ -23,6 +24,7 @@ export default ((opts?: Options) => {
               <a href={link}>{text}</a>
             </li>
           ))}
+          <li><a id="optOut" href="#" onClick={(e) => {e.preventDefault();}}>opt out of tracking</a></li>
         </ul>
       </footer>
     )

@@ -64,7 +64,7 @@ export default {
     },
     error: {
       title: "Not Found",
-      notFound: "Either this page is private or doesn't exist.",
+      notFound: "Either this page is private or doesn't exist. It's probably because manas is lazy and hasn't made a note that he's linked to yet.",
       home: "Return to Homepage",
     },
     folderContent: {

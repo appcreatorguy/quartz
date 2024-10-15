@@ -8,15 +8,17 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
-    pageTitleSuffix: "",
+    pageTitle: "🍄 manas's brain",
+    pageTitleSuffix: " | 🍄",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "umami",
+      host: "https://umami.alphacerium.dev",
+      websiteId: "731296fb-a90e-4f5c-9f77-6aa42094c3be",
     },
-    locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    locale: "en-GB",
+    baseUrl: "notes.alphacerium.dev",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
@@ -25,30 +27,30 @@ const config: QuartzConfig = {
       typography: {
         header: "Schibsted Grotesk",
         body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#eff1f5", // base
+          lightgray: "#e6e9ef", // mantle
+          gray: "#dce0e8", // crust
+          darkgray: "#4c4f69", // text
+          dark: "#5c5f77", // subtext 1
+          secondary: "#8839ef", // accent color (mauve)
+          tertiary: "#7287fd", // hover color (lavender)
+          highlight: "rgba(136, 57, 239, 0.15)", // accent color 15% alpha
+          textHighlight: "#488839ef", // accent color 30% alpha
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#1e1e2e",
+          lightgray: "#626880", // surface 2
+          gray: "#737994", // overlay 0
+          darkgray: "#cdd6f4",
+          dark: "#bac2de",
+          secondary: "#cba6f7",
+          tertiary: "#b4befe",
+          highlight: "rgba(203, 166, 247, 0.15)",
+          textHighlight: "#48cba6f7",
         },
       },
     },
@@ -61,8 +63,8 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "github-light",
-          dark: "github-dark",
+          light: "catppuccin-latte",
+          dark: "catppuccin-mocha",
         },
         keepBackground: false,
       }),
@@ -72,6 +74,7 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.HardLineBreaks(),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
