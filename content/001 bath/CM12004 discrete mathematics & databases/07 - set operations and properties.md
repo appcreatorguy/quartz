@@ -14,7 +14,7 @@ teacher:[[Mac Yang]]
 + the [[universal quantifier]] $\forall$ states that a [[proposition]] is true of **all** elements in a set.
 + the [[existential quantifier]] $\exists$ states that a [[proposition]] is true for **at least one** element in a set.
 + a [[predicate]] is a "variable" [[proposition]]. it depends on elements from a set. when we define this set, we turn the [[predicate]] into a [[proposition]].
-+ predicates follow a general version of **[[logic laws#De Morgan's laws|De Morgan's laws]]**:$$\lnot\forall x\in M P(x) \equiv \exists x\in M (\lnot P(x))$$$$\lnot\exists x \in M P(x)\equiv \forall x \in M (\lnot P(x))$$
++ predicates follow a general version of **[[logic laws#De Morgan's laws|De Morgan's laws]]**:$$\lnot\forall x\in M P(x) \equiv \exists x\in M (\lnot P(x))$$ $$\lnot\exists x \in M P(x)\equiv \forall x \in M (\lnot P(x))$$
 + *to negate a quantifier, negate the predicate and change the quantifier.*
 ## equal sets
 two sets are called *equal sets*, and can be written $A=B$ if they consist of the same elements.
