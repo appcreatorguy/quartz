@@ -6,13 +6,18 @@
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("article" "")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("amsmath" "") ("enumerate" "") ("enumitem" "shortlabels")))
+                     '(("amsmath" "") ("amssymb" "") ("amsthm" "") ("enumerate" "") ("enumitem" "shortlabels")))
    (TeX-run-style-hooks
     "latex2e"
     "article"
     "art10"
     "amsmath"
+    "amssymb"
+    "amsthm"
     "enumerate"
-    "enumitem"))
+    "enumitem")
+   (TeX-add-symbols
+    "lnand"
+    "lnor"))
  :latex)
 

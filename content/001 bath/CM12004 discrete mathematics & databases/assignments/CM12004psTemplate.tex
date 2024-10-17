@@ -4,6 +4,8 @@
 %%% Please fill in your answers in the places provided, you do not need to make any other changes to the file.
 
 \usepackage{amsmath} % for mathematical symbols
+\usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{enumerate} % for fancy numbering
 \usepackage[shortlabels]{enumitem}
 
@@ -93,21 +95,66 @@
           \end{tabular}
           \textbf{conclusion:} neither
     \item % (vii)
-
+          \begin{tabular}{|l|l|l|l|l|}
+            \hline
+            $X$ & $Y$ & $P$ & $Q$ & $P\to Q$\\ \hline
+            0&0&1&0&0\\
+            0&1&1&1&1\\
+            1&0&0&0&1\\
+            1&1&1&0&0\\\hline
+          \end{tabular}
+          \textbf{conclusion:} neither
     \item % (viii)
-
+          \begin{tabular}{|l|l|l|l|l|l|}
+            \hline
+            $X$ & $Y$ & $Z$ & $P$ & $Q$ & $P\to Q$\\ \hline
+            0&0&0&1&1&1\\
+            0&0&1&1&1&1\\
+            0&1&0&0&1&1\\
+            0&1&0&0&1&1\\
+            0&1&1&1&1&1\\
+            1&0&0&0&0&1\\
+            1&0&1&0&1&1\\
+            1&1&1&0&0&1\\
+            1&1&1&1&1&1\\\hline
+          \end{tabular}
+          \textbf{conclusion:} tautology
   \end{enumerate}
 
   \item
   % question 2
-  \begin{enumerate}[(i)]
-    \item % (i)
+        \begin{enumerate}[(a)]
+            \item
+                binary logical connectives operate on 2 binary inputs. each binary input can have 2 values, 1 or 0.\\ \(\therefore\) there are 4 possible combinations of inputs that can be operated on by a connective.\\ \(\implies\) each logical connective can have 4 possible binary outputs, one corresponding to each possible input combination.\\ having 4 possible binary outputs \(\implies\) there are 16 possible combinations of outputs a connective can have.\\ \(\therefore\) \textbf{answer: there are 16 possible binary logical connectives.}
+          \item
+                \begin{enumerate}[(i)]
+                  \item
+                        \(\lnot(\lnot(P\land\lnot Q)\land\lnot(\lnot P\land Q))\)
+                  \item
+                        \(\lnot(\lnot P\lor Q)\lor\lnot(P\lor\lnot Q)\)
+                  \item
+                        \((P\to Q)\to\lnot(Q\to P)\)
+                \end{enumerate}
+                  \item
+                        \def\lnand{\bar\land}
+                        \begin{align}
+                          \lnand&=\lnot(X\land Y)\\
+                          \lnot&=X\lnand X\\
+                          \land&=\lnot(\lnot(X\land Y))=(X\lnand Y)\lnand (X\lnand Y)\\
+                          \lor&=\lnot(\lnot X\land\lnot Y)=(X\lnand X)\lnand(Y\lnand Y)\\
+                          \to&=\lnot X\lor Y=\lnot(X\land\lnot Y)=X\lnand(Y\lnand Y)
+          \end{align}
+                  \item
+                        \def\lnor{\bar\lor}
+                        \begin{align}
+                          \lnor&=\lnot(X\lor Y)\\
+                          \lnot&=X\lnor X\\
+                          \lor&=\lnot(\lnot(X\lor Y))=(X\lnor Y)\lnor (X\lnot Y)\\
+                          \land&=\lnot(\lnot X\lor\lnot Y)=(X\lnor X)\lnor(Y\lnor Y)\\
+                          \to&=\lnot X\lor Y=((X\lnor X)\lnor Y)\lnor((X\lnor X)\lnor Y)
+          \end{align}
 
-    \item % (ii)
-
-    \item % (iii)
-
-  \end{enumerate}
+        \end{enumerate}
 
   \item
   % question 3
@@ -115,11 +162,44 @@
     \item % (a)
     \begin{enumerate}[(i)]
       \item % (i)
-
+      \textbf{question: }\(\forall x\in\mathbb{Z}\exists y\in\mathbb{Z}(x^2<y+1)\)\\
+      \textbf{true}
+      \begin{proof}
+      \begin{align}
+       &x^2<y+1\\
+       \implies& x^2-1<y\\
+       \implies& y>x^2-1
+      \end{align}
+      if \(x\in \mathbb{Z}\) and \(y\in\mathbb{Z} \implies \exists y \mid y>x^2-1 \because \mathbb{Z}\) has no upper bound, so there will always be a bigger \(y\ \forall x\).
+      \end{proof}
       \item % (ii)
-
+      \textbf{question: }\(\exists x\in\mathbb{Z}\forall y\in\mathbb{Z}(x^2<y+1)\)\\
+      \textbf{false}
+      \begin{proof}
+      \begin{align}
+       &x^2<y+1\\
+       \implies&x^2-1<y
+      \end{align}
+      we know this to be false, as for it to be true, $x^2-1$ would have to be smaller than every integer, which is impossible.
+      \end{proof}
       \item % (iii)
-
+      \textbf{question: }\(\exists x\in\mathbb{Z}\forall x\in\mathbb{Z}(x^2<y+1)\)\\\textbf{false}
+      \begin{proof}
+       \begin{align}
+        &x^2<y+1\\
+       \implies&x^2-1<y
+       \end{align}
+       for a similar reason to (ii) we know this to also be false, as for it to be true, $y$ would have to be bigger than every integer, which is impossible.
+      \end{proof}
+      \item
+      \textbf{question: }\(\forall x\in\mathbb{Z}\exists y\in\mathbb{Z}((x<y)\to(x^2<y^2))\)\\\textbf{true}
+      \begin{proof}
+      let $y=x+1$.\\$x<y$ is true $\forall x,y\because x<x+1$\\
+      \(\implies(x<y)\to(x^2<y^2)\) is true if $(x^2<y^2)$ is true.\\
+      \(y^2=(x+1)^2=x^2+2x+1\implies y^2>x^2\)\\
+      \(\therefore (x<y)\to(x^2<y^2)\) is true when $y=x+1$.\\
+      \(\therefore \exists y\in\mathbb{Z} (y=x+1) \forall x\in\mathbb{Z}((x<y)\to(x^2<y^2))\)
+      \end{proof}
     \end{enumerate}
 
     \item % (b)

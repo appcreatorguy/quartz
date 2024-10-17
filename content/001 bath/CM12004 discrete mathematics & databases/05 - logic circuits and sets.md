@@ -1,7 +1,7 @@
 #lecture 
 # 05 - logic circuits and sets
 class: [[CM12004]]
-topics mentioned: #logic #boolean #sets
+topics mentioned: #logic #boolean
 date: 2024-10-09
 teacher: [[Mac Yang]]
 ## more on [[literal|literals]]

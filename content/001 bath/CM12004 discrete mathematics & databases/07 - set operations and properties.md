@@ -3,7 +3,7 @@
 class: [[CM12004]]
 topics mentioned: #sets #logic 
 date: 2024-10-14
-teacher:[[Mac Yang]]
+teacher: [[Mac Yang]]
 
 ## recap
 > from [[06 - sets and quantifiers]]
@@ -30,21 +30,7 @@ $$(A\subset B)\land (B\subset A)\implies A=B$$
 additionally, we define any set as starting out as the empty set ($\emptyset$), so $\forall A;\emptyset\subset A$.
 ### transitivity of subsets
 > for any three sets $A,B,C$, if $A\subset B$ and $B\subset C$, then it follows that $A\subset C$.
-## set operations 
-### union (setwise or)
-for two sets $A,B$, the set $A\cup B=\{x\mid(x\in A)\lor(x\in B)\}$.
-it contains elements in **either** A or **both**.
-![[Pasted image 20241014133950.png|500]]
-it is equivalent to the [[proposition]] $A\lor B$.
-### intersection (setwise and)
-for two sets $A,B$ the set $A\cap B=\{x\mid(x\in A)\land(x\in B)\}$.
-it contains elements in both A **and** B.
-![[Pasted image 20241014134216.png|500]]
-it is equivalent to the [[proposition]] $A\land B$.
-### difference (setwise exclusivity)
-for two sets $A,B$, the set $A\setminus B=\{x\mid(x\in A)\land(x\notin B)\}$.
-it contains elements in A, but **not in** B.
-![[Pasted image 20241014134647.png|500]]
-it is equivalent to the [[proposition]] $A\land\lnot B$.
+## [[set operations]] 
+![[set operations|set operations]]
 ## [[set operation laws]] 
 ![[set operation laws|set operation laws]]
