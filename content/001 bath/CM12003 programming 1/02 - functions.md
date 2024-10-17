@@ -49,7 +49,7 @@ Types are **always in *CamelCase***.
 > max :: Int -> Int -> Int
 > ```
 ### pairs
-data can occur in *pairs* in haskell. [[pairs]] are data types in them self. for example, a pair could represent a 2D vector:
+data can occur in *pairs* in haskell. pairs are data types in them self. for example, a pair could represent a 2D vector:
 ```haskell
 vec1:: (Float, Float)
 vec1 = (2.987, 9.239)

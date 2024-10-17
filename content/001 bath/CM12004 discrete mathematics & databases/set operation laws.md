@@ -10,7 +10,8 @@ $$(A\cap B)\cap C=A\cap(B\cap C)$$
 $$A\cap(B\cup C)=(A\cap B)\cup(B\cap C)$$ 
 $$A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$$
 ### complement laws
-$$A\cup A'=\emptyset$$ $$A\cup A'=U$$
+$$A\cup A'=\emptyset$$
+$$A\cup A'=U$$
 ###  [[logic laws#De Morgan's laws|De Morgan's laws]]
-$$(A\cup B)'=A'\cap B'$$ 
+$$(A\cup B)'=A'\cap B'$$
 $$(A\cap B)'=A'\cup B'$$

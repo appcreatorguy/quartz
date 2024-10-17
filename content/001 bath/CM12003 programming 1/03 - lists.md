@@ -11,7 +11,7 @@ they take many roles:
 + data to be processed by a function
 + steps to take in a computation
 ## defining lists
-in [[02 - functions#Lists|Lecture 2]] we learnt that we can define lists as `[1,2,3]`. however, this is a shorthand. the formal definition for a list is using two *constructors* `[]` and `:`
+in [[02 - functions#Lists|Lecture 2]] we learnt that we can define lists as `[1,2,3]`. however, this is a shorthand. the formal definition for a list is using two [[haskell constructor|constructor]]s, `[]` and `:`
 ```haskell
 []        -- "nil" : the empty list
 x:xs      -- "cons": add the item x to the list xs
@@ -32,7 +32,7 @@ isEmpty :: [a] -> Bool
 isEmpty []     = True
 isEmpty (x:xs) = False
 ```
-this is called *pattern-matching*. there is a pattern, or function definition for each type of list constructor, one for the empty list, and one for a list with items, that is split into the head, and the tail list.
+this is called *[[pattern-matching]]*. there is a pattern, or function definition for each type of list constructor, one for the empty list, and one for a list with items, that is split into the head, and the tail list.
 
 > [!EXAMPLE]
 > under the hood, when you pass a full list to a pattern-matching function, the list is split into head and tail.
