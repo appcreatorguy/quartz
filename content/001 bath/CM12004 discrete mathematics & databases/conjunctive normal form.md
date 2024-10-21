@@ -1,0 +1,4 @@
+CNF is a representation similar to DNF.
++ a *[[disjunctive term]]* is a disjunction of the kind $Y_{i_1} \lor Y_{i_2} \lor \ldots \lor Y_{i_m}$, where $i_j$ is one of the numbers $1,2,\ldots,n$ for $1\le j\le m$ and each $Y_{i_j}$ is a literal.
++ a boolean formula $F$ is in *[[conjunctive normal form]]* (CNF) if $F$ is of the form  $F_1 \land F_2 \land \ldots \land F_k$, where $F_i$ is a disjunctive term for any $i$.
+> **theorem**: for each boolean formula $G$ with variables $X_1, X_2, \ldots , X_n$ there exists a boolean formula $F$ in CNF, with variables from $X_1, X_2, \ldots , X_n$, s.t $G\equiv F$.

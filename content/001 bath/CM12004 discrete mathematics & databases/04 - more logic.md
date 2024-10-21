@@ -1,7 +1,7 @@
 #lecture 
 # 04 - more logic
 class: [[CM12004]]
-topics mentioned: #logic #boolean 
+topics mentioned: #logic #boolean #proof
 date: 2024-10-07
 teacher: [[Mac Yang]]
 ## recap
@@ -19,7 +19,7 @@ $$\begin{aligned}
 \end{aligned}$$
 ## reductio ad absurdum
 reductio ad absurdum means "reduction to the absurd" and is used to prove by contradiction.
-similar to continuous mathematics, we take the negation of some [[proposition]], assume this to be true for the purpose of deriving some contradictory statements, which we can then use to disprove the assumption, leading to the original proposition being proved true.
+similar to continuous mathematics, we take the negation of some [[proposition]], assume this to be true for the purpose of deriving some contradictory statements, which we can then use to disprove the assumption, leading to the original proposition being proved true. this is also sometimes called *proof by contradiction*.
 ## direct and inverse theorems
 most mathematical theorems are described as implications (e.g $x\to y$). such implications are called *direct theorem*.
 direct theorems imply the existence of the *inverse theorem* (e.g $y\to x$).
@@ -49,14 +49,7 @@ if a theorem has the structure $x\to y$, then
 + x is the *sufficient condition* of the theorem, and x **is sufficient** for y.
 + y is the *necessary condition* of the theorem, and y **is necessary** for x.
 if a theorem has the form "x is necessary **and sufficient** for y", it means $x \to y,\ y \to x$ are both true at the same time.
-## disjunctive normal form
-+ let $X_1,X_2,\ldots,X_n$ be variables. Y is a *[[literal]]* if $Y_i$ is either $X_i$ or $\lnot X_i$ for any $i$.
-+ *[[conjunctive term]]* is a conjunction of the kind $Y_{i_1} \land Y_{i_2} \land \ldots \land Y_{i_m}$, where $i_j$ is one of the numbers $1,2,\ldots,n$ for $1\le j\le m$ and each $Y_{i_j}$ is a literal.
-+ a [[boolean formula]] $F$ is in *[[disjunctive normal form]]* (DNF) if $F$ is of the form $F_1 \lor F_2 \lor \ldots \lor F_k$, where $F_i$ is a conjunctive term for any $i$.
-
-> **theorem**: for each boolean formula $G$ with variables $X_1, X_2, \ldots , X_n$ there exists a boolean formula $F$ in DNF, with variables from $X_1, X_2, \ldots , X_n$, s.t $G\equiv F$.
-## conjunctive normal form
-CNF is a representation similar to DNF.
-+ a *[[disjunctive term]]* is a disjunction of the kind $Y_{i_1} \lor Y_{i_2} \lor \ldots \lor Y_{i_m}$, where $i_j$ is one of the numbers $1,2,\ldots,n$ for $1\le j\le m$ and each $Y_{i_j}$ is a literal.
-+ a boolean formula $F$ is in *[[conjunctive normal form]]* (CNF) if $F$ is of the form  $F_1 \land F_2 \land \ldots \land F_k$, where $F_i$ is a disjunctive term for any $i$.
-> **theorem**: for each boolean formula $G$ with variables $X_1, X_2, \ldots , X_n$ there exists a boolean formula $F$ in CNF, with variables from $X_1, X_2, \ldots , X_n$, s.t $G\equiv F$.
+## [[disjunctive normal form]] 
+![[disjunctive normal form|disjunctive normal form]]
+## [[conjunctive normal form]] 
+![[conjunctive normal form]]

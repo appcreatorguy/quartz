@@ -29,15 +29,8 @@ lines 2-4 then define the factorial function itself, with 2 conditions:
 + [[compiler]]: translates a program into another, lower-level programming language, and then often creates an executable file
 [[haskell]] has both a interpreter ([[GHC|GHCi]]) and a compiler ([[GHC]]).
 ## [[haskell boolean expressions]]
-## guards
-```haskell
-absolute n
-    | n < 0     = -n
-    | otherwise = n
-```
-[[guards]] let functions have multiple *cases*, depending on certain boolean conditions
-**the first guard to succeed is the one that determines the functions output**
-*otherwise* is analogous to else, it always returns `True`.
+## guards 
+![[haskell guards]]
 ## recursion
 a function that employs [[recursion]] is one that calls itself. haskell functions can easily be made recursive:
 ```haskell
