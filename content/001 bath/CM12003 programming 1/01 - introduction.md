@@ -30,7 +30,7 @@ lines 2-4 then define the factorial function itself, with 2 conditions:
 [[haskell]] has both a interpreter ([[GHC|GHCi]]) and a compiler ([[GHC]]).
 ## [[haskell boolean expressions]]
 ## guards 
-![[haskell guards]]
+![[guards]]
 ## recursion
 a function that employs [[recursion]] is one that calls itself. haskell functions can easily be made recursive:
 ```haskell

@@ -26,6 +26,9 @@ a [[cache]] is a data store that has much **higher access speeds** than RAM or m
 [[cpu register|registers]] are data stores on the directly on the CPU, and are used to store values that are **currently being used**. they are *extremely small*, but have the *highest speed* of any data store accessible to the CPU.
 
 ## parallelism and parallel architectures 
+
+^9d3fb9
+
 parallelism is the word given to the process of carrying out multiple operation *simultaneously*.
 
-a basic [[von Neumann architecture]] processor is called a [[uniprocessor]]. however some computers have multiple [[arithmetic logic unit|ALUs]]. these are called [[multiprocessor]] systems. 
+a basic [[von Neumann architecture]] processor is called a [[uniprocessor]]. however some computers have multiple [[ALU|ALUs]]. these are called [[multiprocessor]] systems. 

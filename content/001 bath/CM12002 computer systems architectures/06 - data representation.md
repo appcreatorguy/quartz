@@ -1,7 +1,7 @@
 #lecture
 # 06 - data representation
 class: [[CM12002]]
-topics mentioned: #binary #hexadecimal
+topics mentioned: #data #binary #hexadecimal
 date: 2024-10-18
 teacher: [[Fabio Nemetz]]
 ## data representation 
@@ -42,9 +42,9 @@ now, if we use only 2 symbols (`0 1`), our new base would be *2*, and our place 
 
 we can also have bases higher than 10. to do this, we start using the alphabet, starting from $A$. for example, a common base higher than 10 is **[[hexadecimal]]**, where $A=10,B=11,C=12,\ldots,F=15$.
 ## the binary system 
-> a ==b==inary dig==it== is called a *bit*
+> a ==b==inary dig==it== is called a *[[bit]]*
 
-we often use bits when we are talking about binary in relation to computers. bits are also the base unit for how we measure computer storage. 8 bits are called a *byte*, and working backwards, 4 bits are called a *nibble*, (to carry on the joke :3).
+we often use bits when we are talking about binary in relation to computers. bits are also the base unit for how we measure computer storage. 8 bits are called a *[[byte]]*, and working backwards, 4 bits are called a *nibble*, (to carry on the joke :3).
 higher units are then built metrically on top of the byte (kilobyte, megabyte, gigabyte,...).
 
 when we talk about [[computer memory]] instead of computer storage however, it can often be more useful to continue measuring in powers of 2, so we instead use alternative names for these measurements (kibibyte $2^{10}$, mebibyte $2^{20}$, gibibyte $2^{30}$,...)

@@ -205,33 +205,34 @@
     \item % (b)
     \begin{enumerate}[(i)]
       \item % (i)
-
+            let $x=6,y=5. \implies\ x^2=36,\ y+1=6.\ 36>6\therefore$  \textbf{false.}
       \item % (ii)
-
+            let $x=2,y=5. \implies x^2=4,\ y+1=6.\ 4<6\therefore$ \textbf{true.}
       \item % (iii)
-
+            let $y=-1. \implies y+1=0. \forall x\in\mathbb{Z},x^2\ge0\therefore \nexists x\mid x^2<0\therefore$ \textbf{false.}
+      \item% (iv)
+            let $x=0, \implies x^2=0.\ \text{if }y>0,\implies y>x\ \text{but also}\ y^2>0\therefore (x^2<y^2)\ \text{is true}.\ \text{if}\ y<=0,\implies y<x\therefore ((x<y)\to(x^2<y^2))\ \text{is true}.\therefore$ \textbf{true.}
     \end{enumerate}
   \end{enumerate}
 
   \item
   % question 4
-  \begin{enumerate}[(i)]
-    \item % (i)
+  \begin{enumerate}[(a)]
+    \item % (a)
+    \begin{itemize}
+      \item $2^{\emptyset}=1$
 
+      \item $2^{\{0\}}=2$
+
+      \item $2^{\{0\} \cup \{1\}}=4$
+
+      \item $2^{\{\emptyset, 0, 1\}}=2^{3}=8$
+
+      \item $2^{2^{2^{\{0,1\}}}}=2^{2^{2^{2}}}=2^{256}=65536$
+
+    \end{itemize}
     \item % (ii)
-
-    \item % (iii)
-
-    \item % (iv)
-
-    \item % (v)
-
-    \item % (vi)
-
-    \item % (vii)
-
-    \item % (viii)
-
+          for $A, |A|=2^{n}$. therefore, there are $2^{n}$ values of $S$. for each value of s, either $x\in S$, or $x\notin S$. $\implies$ there are $2^{n-1}$ values of $S$ where $x\in S$. $x\in A,\ \therefore$ there are $n$ values of $x$. $\implies$ there are $n\cdot2^{n-1}$ pairs $\{(x,S)\mid x\in S,\S\in2^{A}\}$.
   \end{enumerate}
 
   \item
