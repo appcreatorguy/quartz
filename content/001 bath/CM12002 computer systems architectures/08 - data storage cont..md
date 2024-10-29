@@ -41,3 +41,26 @@ $$16.37=1.637\times10^1$$
 $$-234.0=-2.34\times10^2$$
 $$0.0000367=3.67\times10^-5$$
 scientific notation contains a **mantissa** (that is *normalised*, or between 1 and the base), and an **exponent** (which is some power of the base).
+scientific notation has a few advantages:
++ it is very **simple to understand**
++ it can represent **a large amount of numbers with relatively few digits**
++ it is **fairly accurate in terms of precision**
+however, there are also disadvantages:
++ it can **only give an approximation** of numbers which can otherwise be expressed exactly, such as *recurring decimals* or *irrational numbers*.
++ it can introduce **rounding errors** in large calculations due to digits being truncated, leading to a loss of precision over time.
+### [[normalised representation]]
+![[normalised representation]]
+## floating point in [[binary]] 
+when we store floating points in [[binary]], we use [[normalised representation]], with a *radix* 2.
+therefore, a number can be stored as $\pm m\times 2^{\pm x}$, and can be stored as two signed parts in memory, a sign bit, a mantissa, another sign bit, and a exponent.
+## IEEE 754
+ieee 754 is a standard for floating-point representation in computers, a widely-used format for encoding real numbers in binary. it defines several formats for floating-point numbers, including single precision, which uses 4 bytes and double precision which uses 8 bytes.
+we'll use single precision here as it is easier to show.
+### single precision
+> [!EXAMPLE] example
+> take the following 32 bit stream to be a single precision floating point number.
+> $$00111110001000000000000000000000$$
+> we can split it into three parts:
+> $$\textcolor{#1e90ff}{0}\ \ \textcolor{green}{01111100}\ \ \textcolor{red}{01000000000000000000000}$$
+> the first is a **sign [[bit]]**, the next is a **8 [[bit]]** exponent, and the last is a **23 [[bit]]** mantissa.
+> thus, the exponent can go from -126 to 127 (all zeros and all ones are reserved for special values). the mantissa has an implied leading 1, so it's actually 24 bits, but we only store 23 bits.
