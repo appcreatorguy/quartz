@@ -3,14 +3,13 @@
 class: [[CM12004]]
 topics mentioned: #sequences
 date: 2024-10-30
-teacher:
+teacher: [[Mac Yang]]
 
 ## recap
 > from [[13 - finite state machine and rational numbers|lecture 13]]:
 + $\mathbb{Q}=\{\frac{x}{y}\mid x,y\in\mathbb{Z},y\ne0\}$
 + the set $\mathbb{Q}$ is the set of all rational numbers.
 + the set $\mathbb{Q}$ is the set of all distinct [[equivalence class]]es of the relation $\sim$ on A.
-+ 
 ## sequence of natural numbers
 a [[sequence]] of *rational numbers* is a [[map]] ([[function]])
 $$a:\mathbb{N}\to \mathbb{Q}\text{ such that }n\mapsto a(n)$$
@@ -33,7 +32,7 @@ a sequence $\{a_n\}$ of rational numbers is a *[[cauchy sequence]]*, or **conver
 **essentially**, for a sequence to be converging, there must be a point at which any following values are arbitrarily close to each other.
 this implies that the numbers of a cauchy sequence get arbitrarily close to each other as the sequence progresses; the sequence is *converging*.
 >[!EXAMPLE] example
-> *the sequence $\{a_n\}$ where $a_n=\frac{1}{n}$ is a [[cauchy sequence]].*
+> > **theorem.** *the sequence $\{a_n\}$ where $a_n=\frac{1}{n}$ is a [[cauchy sequence]].*
 > **proof.** we must check that the defitiotion for a cauchy sequence holds for $\{a_n\}$.
 > 1. fix any rational number $\varepsilon >0$.
 > 2. choose any positive integer $N$ greater than $\frac{1}{\varepsilon}$
@@ -43,14 +42,15 @@ a *[[null sequence]]* is a [[sequence]] $\{a_n\}$ of rational numbers with the f
 
 **essentially**, the numbers of a null sequence converge to 0.
 > [!EXAMPLE] example
-> *the sequence $\{a_n\}$ where $a_n=\frac{1}{n}$ is a [[null sequence]].*
+> > **theorem.** *the sequence $\{a_n\}$ where $a_n=\frac{1}{n}$ is a [[null sequence]].*
 > **proof.** we must check that the definition of a null sequence holds for $\{a_n\}$.
 > 1. fix any rational number $\varepsilon >0$.
 > 2. choose any positive integer $N$ greater than $\frac{1}{\varepsilon}$.
 > 3. then for any $n\ge N\ge \frac{1}{\varepsilon}$, we have $|a_n|=\frac{1}{n}<\varepsilon$.
 
 ### null sequences are cauchy sequences
-**theorem.** any [[null sequence]] $\{a_n\}$ is a [[cauchy sequence]].
+> **theorem.** any [[null sequence]] $\{a_n\}$ is a [[cauchy sequence]].
+
 **proof.** we check that the definition of a [[cauchy sequence]] holds for $\{a_n\}$.
 1. fix any rational number $\varepsilon >0$.
 2. by the definition of a [[null sequence]], for the number $\varepsilon\div 2$ one can choose a natural number $N$ such that if $n,m\ge N$, then $|a_n|<\frac{\varepsilon}{2}$ and $|a_m|<\frac{1}{\varepsilon}$.

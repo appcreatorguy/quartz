@@ -228,50 +228,183 @@
 
       \item $2^{\{\emptyset, 0, 1\}}=2^{3}=8$
 
-      \item $2^{2^{2^{\{0,1\}}}}=2^{2^{2^{2}}}=2^{256}=65536$
+      \item $2^{2^{2^{\{0,1\}}}}=2^{2^{2^{2}}}=2^{16}=65536$
 
     \end{itemize}
     \item % (ii)
-          for $A, |A|=2^{n}$. therefore, there are $2^{n}$ values of $S$. for each value of s, either $x\in S$, or $x\notin S$. $\implies$ there are $2^{n-1}$ values of $S$ where $x\in S$. $x\in A,\ \therefore$ there are $n$ values of $x$. $\implies$ there are $n\cdot2^{n-1}$ pairs $\{(x,S)\mid x\in S,\S\in2^{A}\}$.
+          \begin{enumerate}[(i)]
+                  \item
+          for $A, |A|=2^{n}$. therefore, there are $2^{n}$ values of $S$. for each value of s, either $x\in S$, or $x\notin S$. $\implies$ there are $2^{n-1}$ values of $S$ where $x\in S$. $x\in A,\ \therefore$ there are $n$ values of $x$. $\implies$ there are $\bf{n\cdot2^{n-1}}$ pairs $\{(x,S)\mid x\in S,\S\in2^{A}\}$.
+            \item
+                  for each element $x\in A$, there are three options. either: $x\in S,x\in T,$ or $x\notin S\cup T$.
+                  $\implies$, for each element $\{1,2,\ldots,n\}$, it can be in either one of the two sets $S,T$, or neither. $\therefore$ there are three possibilites for each item.
+                  as there are $|A|=n$ elements, $\implies$ the total number of ways to form pairs $\{(S,T)\mid S\in 2^{A},T\in 2^{A},S\cap T=\emptyset\}$ is $\bf{3^{n}}$.
+                  \end{enumerate}
   \end{enumerate}
 
   \item
   % question 5
-  \begin{enumerate}[(a)]
+  \begin{enumerate}[(i)]
     \item % (a)
-
+          $3\times3=9$
     \item % (b)
-
+          $2\times\binom{3}{2}=2\times3=6$
     \item % (c)
-
+          $0$, as the sets have differing cardinalities.
+    \item
+          $2\times2\times2=8$
+    \item
+          $2\times2\times2-\{\textit{all elements map to 2}\}-\{\textit{all elements map to 3}\}=8-2=6$
   \end{enumerate}
 
   \item
   % question 6
   \begin{enumerate}[(a)]
     \item % (a)
-    \begin{itemize}
-      \item $2^{\emptyset}$
-
-      \item $2^{\{0\}}$
-
-      \item $2^{\{0\} \cup \{1\}}$
-
-      \item $2^{\{\emptyset, 0, 1\}}$
-
-      \item $2^{2^{2^{\{0,1\}}}}$
-
-    \end{itemize}
-
+          let $n=1$:
+          \begin{align*}
+            \sum_{1\le i\le1}(2i-1)&=1\\
+            1^{2}&=1
+          \end{align*}
+          $\implies$ true for $n=1$.\\
+          assume $\exists n=k$ such that:
+          \begin{align*}
+            \sum_{1\le i\le k}(2i-1)&=k^{2}\\
+            \frac{2(k)(k+1)}{2}-k&=k^{2}
+          \end{align*}
+          let $n=k+1$:
+          \begin{align*}
+            \sum_{1\le i \le k+1}(2i-1)&=\sum_{1\le i \le k}(2i-1)+2(k+1)-1\\
+                                       &=k^{2}+2k+2-1\\
+                                       &=k^{2}+2k+1\\
+                                       &=(k+1)^{2}
+          \end{align*}
+          $\implies$ true for $n=k+1$.\\
+          $\therefore$ as true for $n=1$ and true for $n=k\implies$ true for $n=k+1\implies\ \sum_{1\le i \le n}(2i-1)=n^{2}\ \forall n\in \mathbb{Z}^{+}.$
     \item % (b)
-    \begin{enumerate}[(i)]
-      \item % (i)
-
-      \item % (ii)
-
-    \end{enumerate}
-
+          let $n=1$:
+          \begin{align*}
+            \sum_{1\le i\le 1}i^{2}&=1^{2}=1\\
+            \frac{1}{6}(1)(2)(3)&=1
+          \end{align*}
+          $\implies$ true for $n=1$.\\
+          assume $\exists n=k$ s.t:
+          \begin{align*}
+            \sum_{1\le i \le k}i^{2}&=\frac{1}{6}k(k+1)(2k+1)\\
+          \end{align*}
+          consider $n=k+1$:
+          \begin{align*}
+            \sum_{1\le i \le k+1}i^{2}&=\sum_{1\le i \le k}i^{2}+(k+1)^{2}\\
+                                      &=\frac{1}{6}k(k+1)(2k+1)+(k+1)^{2}\\
+                                      &=\frac{1}{6}k(k+1)(2k+1)+k^{2}+2k+1\\
+                                      &=\frac{1}{6}(k^{2}+k)(2k+1)+k^{2}+2k+1\\
+                                      &=\frac{1}{6}(2k^{2}+2k^{2}+k^{2}+k)+k^{2}+2k+1\\
+                                      &=\frac{1}{6}(2k^{3}+3k^{2}+k+6k^{2}+12k+6)\\
+                                      &=\frac{1}{6}(2k^{3}+9k^{2}+13k+6)\\
+                                      &=\frac{1}{6}(k+1)(2k^{2}+7k+6)\\
+                                      &=\frac{1}{6}(k+1)(k+2)(2k+3)\\
+                                      &=\frac{1}{6}(k+1)((k+1)+1)(2(k+1)+1)
+          \end{align*}
+          $\implies$ true for $n=k+1$.\\
+          $\therefore$ as true for $n=1$ and true for $n=k\implies$ true for $n=k+1\implies\ \sum_{1\le i \le n}i^{2}=\frac{1}{6}n(n+1)(2n+1)\ \forall n\in \mathbb{Z}^{+}.$
+    \item
+          \begin{align*}
+            \sum_{3\le i \le n-2}i^{2}&=\sum_{1\le i \le n}-\sum_{1\le i \le 2}-n^{2}-(n-1)^{2}\\
+                                      &=\frac{1}{6}n(n+1)(2n+1)-\frac{1}{6}(2)(3)(5)-n^{2}-n^{2}+2n-1\\
+                                      &=\frac{1}{6}(2n^{3}+3n^{2}+n)-5-2n^{2}+2n-1\\
+                                      &=\frac{1}{6}(2n^{3}+3n^{2}+n-30-12n^{2}+12n-6)\\
+                                      &=\frac{1}{6}(2n^{3}-9n^{2}+13n-36)\\
+            \end{align*}
+    \item
+          let $n=1$:
+          \begin{align*}
+            7^{1}-1&=6\\
+            6\div 6&=1\\
+            \implies6&\mid6
+          \end{align*}
+          $\therefore$ true for $n=1$.\\
+          assume $\exists n=k$ s.t:
+          \begin{align*}
+            7^{k}-1&\mid 6
+          \end{align*}
+          consider $n=k+1$:
+          \begin{align*}
+            7^{k+1}-1&=7(7^{k})-1\\
+                     &=7(7^{k})-7+6\\
+                     &=7(7^{k}-1)+6\\
+          \end{align*}
+          as $7^{k}-1\mid 6$ and $6\mid 6\ \implies\ $true for $n=k+1$.\\
+          $\therefore$ as true for $n=1$ and true for $n=k\implies$ true for $n=k+1\implies \ 7^{n}-1\mid 6\ \forall n\in \mathbb{Z}^{+}.$
+    \item
+          let $n=3$:
+          \begin{align*}
+            2(3)+1&=7\\
+            2^{3}&=8\\
+            7&\leq 8
+            \end{align*}
+          $\implies$ true for $n=1$\\
+          assume $\exists n=k$ s.t:
+          \begin{align*}
+            2k+1 \leq 2^{k}
+          \end{align*}
+          consider $n=k+1$:
+          \begin{align*}
+            2(k+1)+1&=2k+2+1=2k+3\\
+            \text{recall } 2k+1&\leq 2^{k}\\
+            \implies 2k+3&\leq 2^{k}+2\\\\
+            2^{k+1}&=2(2^{k})=2^{k}+2^{k}\\
+            \implies 2^{k}+2^{k}&\geq 2^{k}+2\\
+            \implies 2k+3&\leq 2^{k}+2^{k}\\
+            2k+3&\leq 2^{k+1}\\
+            \therefore 2(k+1)+1&\leq 2^{k+1}
+          \end{align*}
+          $\implies$ true for $n=k+1$.\\
+          $\therefore$ as true for $n=1$ and true for $n=k\implies$ true for $n=k+1\implies\ 2n+1\leq2^{n}\ \forall n\in\mathbb{Z}^{+},\ n\geq 3.$
   \end{enumerate}
+  \item
+        \begin{enumerate}[(i)]
+          \item
+                reflexive: for any $x\in \mathbb{Z},\ x+x=2x$. $2x$ is even $\implies$ not reflexive.\\\\
+                symmetric: as $x+y=y+x$ ($+$ is symmetric), the relation is symmetric $\forall x,y\in\mathbb{Z}$.\\\\
+                transitive: $2+3=5$, which is odd, and $3+4=7$ which is odd. $2+4=6$ which is not odd. $\implies$ not transitive.\\\\
+                $\therefore$ symmetric.
+          \item
+                reflexive: for any $x\in \mathbb{Z},\ x+x=2x$. $2x$ is even $\implies$ reflexive.\\\\
+                symmetric: as $x+y=y+x$ ($+$ is symmetric), the relation is symmetric $\forall x,y\in\mathbb{Z}$.\\\\
+                transitive: $2+4=6$, which is even and $4+8=12$ which is even. $2+8=10$ which is even. $\implies$ transitive.\\\\
+                $\therefore$ reflexive, symmetric, and transitive.
+          \item
+                reflexive: for any $x\in \mathbb{Z}$, $xx=x^{2}$.\\
+                if $x$ is even:\[(2k)^{2}=4k^{2}\]$\implies$ even.\\
+                if $x$ is odd:\[(2k+1)^{2}=4k^{2}+4k+1\] $\implies$ odd.\\
+                $\implies$ not reflexive.\\\\
+                symmetric: as $xy=yx$ ($\times$ is symmetric), the relation is symmetric $\forall x,y\in\mathbb{Z}$.\\\\
+                transitive: $3(5)=15$, which is odd, and $5(7)=35$. $3(7)=21$, which is odd. $\implies$ transitive.\\\\
+                $\therefore$ symmetric and transitive.
+          \item
+                reflexive: for any $x\in \mathbb{Z},\ x+x(x)=x(x+1).$\\
+                if $x$ is even:\[(2k)(2k+1)=4k^{2}+2k\]$\implies$ even.\\
+                if $x$ is odd:\[(2k+1)(2k+2)=4k^{2}+6k+2\]$\implies$ even.\\
+                $\implies$ reflexive.\\\\
+                symmetric: if $x$ is even, $xy$ is even.\\
+                $y + (\text{even})$ is only even if $y$ is even.\\
+                $\therefore$ if $y$ is odd, the relation is not symmetric. $\implies$ not symmetric $\forall x,y\in\mathbb{Z}$.\\\\
+                transitive: $2+2(3)=8$, which is even, and $3+3(5)=18$, which is even. $2+2(5)=12$, which is even. $\implies$ transitive.\\\\
+                $\therefore$ reflexive and transitive.
+        \end{enumerate}
+  \item
+        \begin{enumerate}[(a)]
+          \item
+                reflexive: $\subset$ is reflexive, as for any set $A,\ A\subset A$ as every element from $A$ is also in $A$.\\\\
+                antisymmetric: if $A\subset B$ and $B\subset A$, then every element is $B$ is in $A$, and every element in $A$ is also in $B$, so $A=B$.\\\\
+                transitive: $\{b\}\subset\{a,b\}$, and $\{a,b\}\subset \{a,b,c\}$ and $\{b\}\subset\{a,b,c\}$.\\$\{c\}\subset\{a,c\}$,$\{a,c\}\subset\{a,b,c\}$ and $\{c\}\subset\{a,b,c\}.$\\$\implies$ $C$ is transitive on $A$.\\\\
+                $\therefore\ \subset$ is partial order on $A$.
+          \item
+                $\subset$ is not total order on $A$, as $\{b\}\not\subset\{c\}$ and $\{c\}\not\subset\{b\}$, and for a total order relation, every element is related to another in some direction.
+          \item
+                $\{a,b,c\}$ is a maximal element, as it is only a subset of itself. This is because every other element has a smaller cardinality than it, and so cannot be related to (a subset of) it.\\
+                $\{b\}$ and $\{c\}$ are minimal elements. This is because they both have a cardinality of $1$, and so the only elements that can be a subset of it also have a cardinality of 1, and $\{b\}\not\subset\{c\}\ \&\ \{c\}\not\subset\{b\}$.
+        \end{enumerate}
 \end{enumerate}
 
 \end{document}

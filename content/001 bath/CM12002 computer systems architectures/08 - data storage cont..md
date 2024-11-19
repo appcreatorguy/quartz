@@ -53,8 +53,8 @@ however, there are also disadvantages:
 ## floating point in [[binary]] 
 when we store floating points in [[binary]], we use [[normalised representation]], with a *radix* 2.
 therefore, a number can be stored as $\pm m\times 2^{\pm x}$, and can be stored as two signed parts in memory, a sign bit, a mantissa, another sign bit, and a exponent.
-## IEEE 754
-ieee 754 is a standard for floating-point representation in computers, a widely-used format for encoding real numbers in binary. it defines several formats for floating-point numbers, including single precision, which uses 4 bytes and double precision which uses 8 bytes.
+## [[IEEE 754]]
+[[IEEE 754]] is a standard for floating-point representation in computers, a widely-used format for encoding real numbers in binary. it defines several formats for floating-point numbers, including single precision, which uses 4 bytes and double precision which uses 8 bytes.
 we'll use single precision here as it is easier to show.
 ### single precision
 > [!EXAMPLE] example
@@ -64,3 +64,5 @@ we'll use single precision here as it is easier to show.
 > $$\textcolor{#1e90ff}{0}\ \ \textcolor{green}{01111100}\ \ \textcolor{red}{01000000000000000000000}$$
 > the first is a **sign [[bit]]**, the next is a **8 [[bit]]** exponent, and the last is a **23 [[bit]]** mantissa.
 > thus, the exponent can go from -126 to 127 (all zeros and all ones are reserved for special values). the mantissa has an implied leading 1, so it's actually 24 bits, but we only store 23 bits.
+
+> *continued in [[09 - real numbers|lecture 9]]*
