@@ -98,6 +98,9 @@ Add (Num 3) (Sub (Num 5) (Mul (Num 4) (Num 2)))
 > ```haskell
 > Num 3 :+ (Num 5 :- (Num 4 :* Num 2))
 > ```
+
+^0ecc47
+
 ## class instances
 what if we want to show our expressions neatly in the output, like this?
 ```haskell

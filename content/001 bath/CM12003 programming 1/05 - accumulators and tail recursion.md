@@ -9,7 +9,7 @@ the *[[time complexity]]* of a [[function]] is the number of *computation steps*
 for a given [[function]], we can write its [[time complexity]] in the form $O(n^2)$. this is called its *[[big-o notation]]*.
 
 the *[[space complexity]]* of a function is the measure of the amount of [[computer memory]] that a computer uses while it is computing an input of a given size $n$. it is also written in [[big-o notation]].
-## accumulators and tail [[recursion]]
+## accumulators and [[tail recursion]]
 compare the two [[function]]s:
 ```haskell
 -- Recursive:

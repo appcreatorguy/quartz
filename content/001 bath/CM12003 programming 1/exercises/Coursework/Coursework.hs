@@ -1,3 +1,4 @@
+import Data.List ((\\))
 
 ------------------------- Merge sort
 
@@ -15,7 +16,7 @@ msort [x] = [x]
 msort xs  = msort (take n xs) `merge` msort (drop n xs)
   where
     n = length xs `div` 2
-    
+
 ------------------------- Game world types
 
 type Character = String
@@ -38,33 +39,80 @@ testGame i = Game [(0,1)] i ["Russell"] [[],["Brouwer","Heyting"]]
 
 ------------------------- Assignment 1: The game world
 
+tupleElem :: Eq a => a -> (a,a) -> (Bool,a)
+tupleElem x (a,b)
+  | x == a = (True, b)
+  | x == b = (True, a)
+  | otherwise = (False, undefined)
+
 connected :: Map -> Node -> [Node]
-connected = undefined
+connected [] _ = []
+connected (m:ms) n
+  | fst (tupleElem n m) = snd (tupleElem n m) : connected ms n
+  | otherwise = connected ms n
 
 connect :: Node -> Node -> Map -> Map
-connect = undefined
+connect i j m
+  | (i,j) `elem` m || (j,i) `elem` m = m
+  | lesser i j == i                  = msort ((i,j) : m)
+  | otherwise                        = msort ((j,i) : m)
+  where
+    lesser i j
+      | i <= j    = i
+      | otherwise = j
 
 disconnect :: Node -> Node -> Map -> Map
-disconnect = undefined
+disconnect i j m
+  | lesser i j == i = removeItem (i,j) m
+  | otherwise = removeItem (j,i) m
+  where
+    lesser i j
+      | i <= j    = i
+      | otherwise = j
+    removeItem _ []                 = []
+    removeItem x (y:ys) | x == y    = removeItem x ys
+                        | otherwise = y : removeItem x ys
 
 add :: Party -> Event
-add = undefined
+add p (Game m n party ps) = Game m n (msort p ++ party) ps
+add _ Over = Over
+
+removeCharactersFromParty :: Party -> Party -> Party
+removeCharactersFromParty cs ps = ps \\ cs
+
+addPartyToMap :: Int -> Party -> [Party] -> [Party]
+addPartyToMap a p ps =
+  let (ys, zs) = splitAt a ps in
+    case zs of
+      []     -> error "Index out of bounds"
+      (x:xs) -> ys ++ [msort (p ++ x)] ++ xs
+
+removePartyFromMap :: Int -> Party -> [Party] -> [Party]
+removePartyFromMap a p ps =
+  let (ys, zs) = splitAt a ps in
+    case zs of
+      []     -> error "Index out of bounds"
+      (x:xs) -> ys ++ [removeCharactersFromParty p x] ++ xs
 
 addAt :: Node -> Party -> Event
-addAt = undefined
+addAt n p (Game m n' p' ps) = Game m n' p' (addPartyToMap n p ps)
+addAt _ _ Over = Over
 
 addHere :: Party -> Event
-addHere = undefined
+addHere p (Game m n p' ps) = Game m n p' (addPartyToMap n p ps)
+addHere _ Over = Over
 
 remove :: Party -> Event
-remove = undefined
+remove p (Game m n party ps) = Game m n (removeCharactersFromParty p party) ps
+remove _ Over = Over
 
 removeAt :: Node -> Party -> Event
-removeAt = undefined
+removeAt n p (Game m n' p' ps) = Game m n' p' (removePartyFromMap n p ps)
+removeAt _ _ Over = Over
 
 removeHere :: Party -> Event
-removeHere = undefined
-
+removeHere p (Game m n p' ps) = Game m n p' (removePartyFromMap n p ps)
+removeHere _ Over = Over
 
 ------------------------- Assignment 2: Dialogues
 

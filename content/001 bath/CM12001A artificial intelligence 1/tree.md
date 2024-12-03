@@ -1,0 +1,2 @@
+#trees 
+a [[tree]] is a special type of [[graph]], with additional rules that every node (except the *root* [[node]]) has exactly one parent [[node]]. additionally, no node can be its own ancestor, preventing cycles. finally, each node and all of its descendants form a *subtree*. these rules allow for efficient searches and traversals of the tree structure, making them particularly useful in computer science applications such as file systems and data storage.

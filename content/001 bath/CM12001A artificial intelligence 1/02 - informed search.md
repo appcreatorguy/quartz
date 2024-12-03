@@ -3,7 +3,7 @@
 class: [[CM12001A]]
 topics mentioned: #search
 date: 2024-11-18
-teacher:
+teacher: [[Ben Ralph]]
 
 ## greedy search
 in a [[greedy search]], we want to find the path from the start node to the goal node that has the lowest weight.

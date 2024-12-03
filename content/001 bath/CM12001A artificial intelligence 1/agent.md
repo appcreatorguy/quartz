@@ -1,0 +1,2 @@
+#ai 
+an [[agent]] is an *autonomous* entity that perceives its environment and **takes actions** to achieve a goal. in the context of artificial intelligence, an agent can be a program, a piece of code, or even a robot that is designed to perform a specific task.

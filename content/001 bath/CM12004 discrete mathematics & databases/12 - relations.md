@@ -19,7 +19,7 @@ teacher: [[Mac Yang]]
 [[relation]]s are a very fundamental topic both in discrete mathematics, and also as the foundation of [[relational database]]s.
 to define them, let $A,B$ be sets. a [[relation]] $R$ between $A,B$ is a subset of $A\times B$ where $x\in A$ is related to $y\in B$ if the pair $(x,y) \in R$.
 
-the symbol $*$ can be used to define a **general relation**, for example we can write $x*y$ instead of $(x,y)\in R. when we specify the relation, we can replace the $*$ with a symbol such as $=,>,<,$etc.
+the symbol $*$ can be used to define a **general relation**, for example we can write $x*y$ instead of $(x,y)\in R$. when we specify the relation, we can replace the $*$ with a symbol such as $=,>,<,$etc.
 
 if the two sets of a relation are equivalent ($A=B$), we can say $R\subset A\times A$, and the relation is **on $A$**.
 > [!example] examples
