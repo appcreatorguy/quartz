@@ -1,0 +1,41 @@
+CREATE TABLE Model (
+model_no VARCHAR(10) PRIMARY KEY,
+manufacturer VARCHAR(20),
+type VARCHAR(10));
+
+CREATE TABLE Station (
+station_id INTEGER PRIMARY KEY,
+setup_member INTEGER NOT NULL,
+longitude FLOAT,
+latitude FLOAT,
+setup_date DATE,
+FOREIGN KEY (setup_member) REFERENCES CrewMember(crew_id)
+);
+
+CREATE TABLE Asset (
+asset_id INTEGER PRIMARY KEY,
+station_id INTEGER NOT NULL,
+model_no INTEGER NOT NULL,
+installation_date DATE,
+FOREIGN KEY (station_id) REFERENCES Station(station_id),
+FOREIGN KEY (model_no) REFERENCES Model(model_no)
+);
+
+CREATE TABLE Maintenance (
+station_id INTEGER NOT NULL,
+crew_id INTEGER NOT NULL,
+asset_id INTEGER NOT NULL,
+setup_date DATE,
+description TEXT,
+PRIMARY KEY (station_id, crew_id, asset_id),
+FOREIGN KEY (station_id) REFERENCES Station(station_id),
+FOREIGN KEY (crew_id) REFERENCES CrewMember(crew_id),
+FOREIGN KEY (asset_id) REFERENCES Asset(asset_id)
+);
+
+CREATE TABLE CrewMember (
+crew_id INTEGER PRIMARY KEY,
+firstname VARCHAR(50),
+surname VARCHAR(50),
+phone_num INTEGER
+);

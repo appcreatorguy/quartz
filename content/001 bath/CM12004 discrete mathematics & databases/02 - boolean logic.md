@@ -6,7 +6,7 @@ date: 2024-10-02
 teacher: [[Mac Yang]]
 ## propositions
 ![[proposition|proposition]]
-## logic connectives
+## [[logical connectives]]
 ### conjunction
 a **conjunction** of two propositions is true *if and only if* each proposition is true.
 a conjunction is a logical **or**.
