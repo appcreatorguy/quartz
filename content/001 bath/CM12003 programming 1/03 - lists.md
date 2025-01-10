@@ -11,7 +11,7 @@ they take many roles:
 + data to be processed by a function
 + steps to take in a computation
 ## defining lists
-in [[02 - functions#Lists|Lecture 2]] we learnt that we can define lists as `[1,2,3]`. however, this is a shorthand. the formal definition for a list is using two [[haskell constructor|constructor]]s, `[]` and `:`
+in [[02 - functions#Lists|Lecture 2]] we learnt that we can define lists as `[1,2,3]`. however, this is a shorthand. the formal definition for a list is using two constructors, `[]` and `:`
 ```haskell
 []        -- "nil" : the empty list
 x:xs      -- "cons": add the item x to the list xs

@@ -1,4 +1,4 @@
-#lecture 
+py#lecture 
 # 05 - logic circuits and sets
 class: [[CM12004]]
 topics mentioned: #logic #boolean

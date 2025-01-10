@@ -1,0 +1,2 @@
+#type 
+in computer science, a [[type]] is a way of categorising data so that it is clear what kind of value can be held by a particular variable, what kind of operations can be performed on that value, and how much memory it will require. for example, in a programming language, the type `integer` might be used to categorise whole numbers, such as 1 or 2, while the type `string` might be used to categorise sequences of characters, such as "hello" or "goodbye".
