@@ -1,0 +1,2 @@
+#trees 
+a [[binary tree]] is a special case of a ordered [[tree]], where each node can only have up to two children. additionally, when placing nodes, all the elements to the left of a node are less than the node, and all the elements to the right of a node are greater than the node. this creates a natural sorting system where the tree is ordered in ascending order from left to right. this property makes binary trees particularly useful for storing and retrieving data in a sorted manner, such as in databases or file systems.
