@@ -21,6 +21,7 @@ const config: QuartzConfig = {
     baseUrl: "notes.alphacerium.dev",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
+    generateSocialImages: false,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
