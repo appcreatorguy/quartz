@@ -39,11 +39,16 @@ thus, our final *typical* instruction looks like this in memory:
 | --------- | --------- | --------- |
 | 2 bytes   | 2 bytes   | 2 bytes   |
 ## registers
-like the data store, [[register]]s consist of arrays of bits. the [[ALU]] contains registers for holding the data while it is processed. they go under a variety of names, such as registers, or [[accumulator]]s. the control unit also has special registers to store program information.
-the number of registers in the [[ALU]] determines how [[instruction]]s are defined.
+like the data store, [[register]]s consist of arrays of bits. the [[arithmetic logic unit]] contains registers for holding the data while it is processed. they go under a variety of names, such as registers, or [[accumulator]]s. the control unit also has special registers to store program information.
+the number of registers in the [[arithmetic logic unit]] determines how [[instruction]]s are defined.
 for example, with *one register*, then only a single operand needs to be specified, as the other is implied to be the single register itself. this assumes the existence of two operations, a *load* to copy an operand from a store location into the register, and a *store* to copy from a register to a store location.
 
 now we can define addition with a sequence of [[instruction]]s:
 1. `LOAD` the content of the first location into the register
 2. `ADD` the content of the second location.
 3. `STORE` the result in another register.
+
+if we have more than one [[register]], say 8, then we need *3 bits* in the instruction word to code it. 
+![[CM12002_W05_L02_P02_Instructions(1).svg]]
+
+some instructions have no arguments, such as $INC\ R_n$ or $HLT$.

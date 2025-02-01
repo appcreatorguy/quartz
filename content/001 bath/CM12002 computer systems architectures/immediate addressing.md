@@ -1,0 +1,1 @@
+in [[immediate addressing]], the given value is used itself. this is typically indicated in assembly using a '#' symbol, such as `mov r0, #10` which would move the value 10 directly into register `r0`. immediate addressing is useful for loading small constant values, such as zeroes or ones, into a register.

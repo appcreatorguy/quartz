@@ -1,5 +1,5 @@
 #lecture
-# 18 - sequential logic
+# 19 - sequential logic
 class: [[CM12002]]
 topics mentioned: #logic
 date: 2024-12-12

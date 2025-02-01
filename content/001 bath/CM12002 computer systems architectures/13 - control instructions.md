@@ -20,5 +20,5 @@ some examples of [[conditional branch]]es are:
 + `BRE`: *branch if equal*
 a branch instruction in which the branch **is always taken** is called an *unconditional* branch.
 ### subroutines
-repeated tasks may be implemented in a more structured way. we do this through the use of [[subroutines]] or *procedures*.
+repeated tasks may be implemented in a more structured way. we do this through the use of [[subroutine]]s or *procedures*.
 a block of instructions is placed in memory and the starting location is designated. the subroutine can then be *called* by branching to this designated starting location. when the block is completed, the subroutine returns to the point at which it was called. for the CPU to know where it needs to return to, a [[stack]] is used.

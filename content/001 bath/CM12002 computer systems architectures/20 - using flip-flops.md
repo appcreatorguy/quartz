@@ -1,5 +1,5 @@
 #lecture
-# 19 - using flip-flops
+# 20 - using flip-flops
 class: [[CM12002]]
 topics mentioned: #logic
 date: 2024-12-14

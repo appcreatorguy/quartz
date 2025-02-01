@@ -5,7 +5,7 @@ topics mentioned: #binary #data
 date: 2024-10-31
 teacher: [[Fabio Nemetz]]
 ## real numbers, continued
-> *continuing from [[08 - more on sets|lecture 8]]:*
+> *continuing from [[08 - data storage cont.|lecture 8]]:*
 
 > [!EXAMPLE] example
 > take the following 32 bit stream to be a single precision floating point number.

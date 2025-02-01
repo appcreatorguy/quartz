@@ -8,8 +8,8 @@ teacher: [[Mac Yang]]
 > *from [[17 - divisibility of integers|lecture 17]]:*
 + for $a,b, m\in \mathbb{Z},m>0$, we say that $a$ is **congruent to** $b$ modulo $m$, if $a-b$ is divisible by $m$.
 	+ $m$ is called the modulus, which is a positive integer
-	+ $a$ is congruent to $b$ modulo $m$ which is denoted by $a\equiv b \mod m$
-	+ for example, $7\equiv 1 \mod 3$ as $7-1=6$ which is divisible by 3.
+	+ $a$ is congruent to $b$ modulo $m$ which is denoted by $a\equiv b (\mod m)$. the brackets imply that the modulo is applied to both $a$ and $b$.
+	+ for example, $7\equiv 1 (\mod 3)$ as $7-1=6$ which is divisible by 3.
 ## modular congruence properties
 1. For $a,m\in\mathbb{Z},m>0$, let integer $r$ be the remainder of the $a\div m$. then $a\equiv r\mod m$.
 2. fix $m\in\mathbb{Z}, m>0$. the relation "congruent modulo $m$" is an [[equivalence relation]] on $\mathbb{Z}$.

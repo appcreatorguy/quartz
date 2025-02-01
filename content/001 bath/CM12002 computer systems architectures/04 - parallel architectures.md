@@ -5,7 +5,7 @@ topics mentioned: #von_neumann #architecture
 date: 2024-10-11
 teacher: [[Fabio Nemetz]]
 ## the [[von Neumann architecture|von Neumann]] bottleneck (memory wall)
-the *memory wall* is the name given to the limiting factor that occurs when the speed at which the data and instructions can be retrieved from memory is too slow for the CPU to operate at speed.
+the *memory wall* is the name given to the limiting factor that occurs when the speed at which the data and instructions can be retrieved from memory is too slow for the [[CPU]] to operate at speed.
 > [!TLDR] 
 > in other words, it occurs when **memory bus throughput is too slow for CPU speed**.
 > because program memory and data memory are *shared*, this problem is exacerbated.
@@ -23,7 +23,7 @@ a [[cache]] is a data store that has much **higher access speeds** than RAM or m
 	+ just off-chip, slower than L1 cache, but faster than main memory 
 	+ larger than L1 cache 
 ## registers
-[[cpu register|registers]] are data stores on the directly on the CPU, and are used to store values that are **currently being used**. they are *extremely small*, but have the *highest speed* of any data store accessible to the CPU.
+[[register|registers]] are data stores on the directly on the CPU, and are used to store values that are **currently being used**. they are *extremely small*, but have the *highest speed* of any data store accessible to the CPU.
 
 ## parallelism and parallel architectures 
 
@@ -31,4 +31,4 @@ a [[cache]] is a data store that has much **higher access speeds** than RAM or m
 
 parallelism is the word given to the process of carrying out multiple operation *simultaneously*.
 
-a basic [[von Neumann architecture]] processor is called a [[uniprocessor]]. however some computers have multiple [[ALU|ALUs]]. these are called [[multiprocessor]] systems. 
+a basic [[von Neumann architecture]] processor is called a [[uniprocessor]]. however some computers have multiple [[arithmetic logic unit|ALUs]]. these are called [[multiprocessor]] systems. 

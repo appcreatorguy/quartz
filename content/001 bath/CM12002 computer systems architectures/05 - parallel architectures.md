@@ -9,14 +9,14 @@ teacher: [[Fabio Nemetz]]
 ![[04 - parallel architectures#parallelism and parallel architectures]]
 
 [[multiprocessor]] systems are (potentially) fast, but harder to control, and so therefore there are many kinds of parallel architecture, depending on whether:
-+ each [[ALU|ALU]] has **its own [[control unit]]** (*task-level* parallelism)
-+ each [[ALU|ALU]] has **its own data storage** (*data-level* parallelism)
++ each [[arithmetic logic unit|arithmetic logic unit]] has **its own [[control unit]]** (*task-level* parallelism)
++ each [[arithmetic logic unit|arithmetic logic unit]] has **its own data storage** (*data-level* parallelism)
 ## task level parallelism
 when using task-level parallelism, there are two possible *control architectures* for [[multiprocessor]]s:
-+ *multiple instruction streams*: each [[ALU|ALU]] has a separate [[control unit]].
-+ *single instruction stream*: a single [[control unit]] issues the same instruction to multiple [[ALU]]s.
++ *multiple instruction streams*: each [[arithmetic logic unit|arithmetic logic unit]] has a separate [[control unit]].
++ *single instruction stream*: a single [[control unit]] issues the same instruction to multiple [[arithmetic logic unit]]s.
 ## data level parallelism 
-independently of the *control architecture*, the [[ALU]]s may either operate on:
+independently of the *control architecture*, the [[arithmetic logic unit]]s may either operate on:
 + the **same *data stream***
 + a **different *control stream***
 ## Flynn's taxonomy
@@ -36,7 +36,7 @@ there are two possible memory architectures
 ### shared memory
 each processor has access to a common memory space that is shared between all processors.
 sharing is efficient use of memory space, but:
-+ it can introduce [[bottleneck]]s from the memory to the CPU.
++ it can introduce [[bottleneck]]s from the memory to the [[CPU]].
 + [[cache coherence]] becomes a problem, where data in a processors cache is modified, and must be updated in memory to be used by other processors.
 because of these issues, shared memory architectures do not scale to well.
 ### distributed memory

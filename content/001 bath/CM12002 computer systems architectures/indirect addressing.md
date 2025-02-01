@@ -1,0 +1,1 @@
+when [[indirect addressing]] is used, the operand is a location of the store which contains *not data*, but **another address**, where the true operand will be found. this second address is known as the effective address, and the process of obtaining the true operand is called indirect access.

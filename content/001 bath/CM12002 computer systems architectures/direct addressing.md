@@ -1,0 +1,1 @@
+when [[direct addressing]] is used, the value given is the address of a location in memory that contains the operand.
